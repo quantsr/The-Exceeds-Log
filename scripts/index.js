@@ -11,6 +11,7 @@ var openFile = function(event) {
  
   document.getElementById("operation-membership").disabled= false;
   document.getElementById("operation-print").disabled= false;
+  document.getElementById("operation-storage").disabled= false;
 }
 
 
@@ -27,9 +28,24 @@ function readMember(){
       i++;
     }     
   }         
-        
+  
 }
-    
+
+function storage(){
+  var node = document.getElementById('output');
+  if(node.innerText.length > 0){
+    node.innerText = "";
+  }
+  
+  for(var i = 0; i < globalLog.length; i++){
+    if(globalLog[i].includes('"Storage"')){
+      node.innerText += globalLog[i] + "\n";
+    }else{
+      i++;
+    }     
+  }            
+}
+
 function print(){
   var node = document.getElementById('output');
   if(node.innerText.length > 0){
