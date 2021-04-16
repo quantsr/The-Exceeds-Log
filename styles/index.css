@@ -1,0 +1,35 @@
+body {
+  background-color: #0c1620;
+  margin-top: 80px;
+}
+
+.header{
+  color: #f5d38c;
+  text-align: center;
+}
+
+label{
+  color: #4d99a6;
+}
+
+input{
+  color: #4d99a6;
+}
+
+#output{
+  border: 2px solid #ffc031;
+  color: #f5d38c;
+  background-color: #1e272e;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+label{
+  margin-left: 80px;
+}
+
+button{
+  margin-left: 80px;
+}
