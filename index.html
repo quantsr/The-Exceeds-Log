@@ -17,16 +17,22 @@
     <input type= "file"
            id= "csv-upload"
            accept=".csv"
-           onchange='openFile(event)'
+           onchange='openFile(event)'  
+           multiple>
+    <input type= "file"
+           id= "csv-upload2"
+           accept=".csv"
+           onchange='openFile2(event)'
            multiple>
     <button id= "operation-print" type="button" disabled= true onclick="print()">Print</button>
     <button id= "operation-membership" type="button" disabled= true onclick="readMember()">Membership</button>
     <button id= "operation-storage" type="button" disabled= true onclick="storage()">Storage</button>
-
-    
+     
   </div>
-
+  <h2>1st .csv</h2>
   <div id = "output"></div>
+  <h2>2nd .csv</h2>
+  <div id = "output2"></div>
 
   <script src="scripts/index.js"></script>
 
