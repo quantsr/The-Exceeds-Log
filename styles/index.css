@@ -14,9 +14,15 @@ label{
 
 input{
   color: #4d99a6;
+  border: 1px solid #4d99a6; 
 }
 
-#output{
+h2{
+   color: #f5d38c;
+  text-align:center;
+}
+
+#output, #output2{
   border: 2px solid #ffc031;
   color: #f5d38c;
   background-color: #1e272e;
@@ -24,10 +30,12 @@ input{
   padding-left: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-top: 30px;
+/*   margin-top: 30px; */
   width: 80%;
+  height: 300px;
   margin-left: auto;
   margin-right: auto;
+  overflow: auto;
 }
 
 label{
