@@ -1,6 +1,7 @@
 body {
   background-color: #0c1620;
   margin-top: 80px;
+  --header-load-time: 300ms;
 }
 
 .header{
@@ -12,6 +13,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 40px;  
+  animation: header-load var(--header-load-time) ease-out;
 }
 
 h1{
@@ -28,8 +30,14 @@ input{
 }
 
 h2{
+  opacity: 0;
   color: #f5d38c;
   text-align:center;
+  animation-name: h2-load;
+  animation-delay: var(--header-load-time);
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 #output{
@@ -44,9 +52,37 @@ h2{
   margin-right: auto;
   margin-bottom: 20px;
   overflow: auto;
+  animation: div-load var(--header-load-time) ease-out;
 }
 
 button{
   margin-left: 10px;
   margin-top: 10px;
+}
+
+@keyframes header-load{
+  0%{
+    transform: translatey(-100%);
+  }
+  100%{
+    transform: translatey(0%);
+  }
+}
+
+@keyframes div-load{
+  0%{
+    transform: translatey(300%);
+  }
+  100%{
+    transform: translatey(0%);
+  }
+}
+
+@keyframes h2-load{
+  0%{
+    opacity: 0;
+  }
+  100%{
+     opacity: 1;
+  }
 }
